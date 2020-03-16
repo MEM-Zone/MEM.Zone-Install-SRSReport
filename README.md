@@ -54,6 +54,7 @@ Adds sql extension(s) from a folder on disk to specified SQL database.
 ## Extensions
 
 There are two types of extensions currently supported. You can find two examples in the `Extensions` folder.
+Extensions are usefull when you need to add user defined functions or give additional rights for your imported reports.
 
 * Permission
 * User Defined function
@@ -77,7 +78,7 @@ Get-Help .\Install-SRSReport.ps1
 ```
 
 >**Notes**
-> If you don't use `Windows Authentication` (you should!) in your SQL server you can use the `-UseSQLAuthentication` switch.
+> If you don't use `Windows Authentication` (you should!), you can use the `-UseSQLAuthentication` switch.
 > PowerShell script needs to be run as administrator.
 
 
