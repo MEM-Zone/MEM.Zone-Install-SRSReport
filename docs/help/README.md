@@ -47,7 +47,7 @@ Adds sql extension(s) from a folder on disk to specified SQL database.
 ## Extensions
 
 There are two types of extensions currently supported. You can find two examples in the `Extensions` folder.
-Extensions are usefull when you need to add user defined functions or give additional rights for your imported reports.
+Extensions are useful when you need to add user defined functions or give additional rights for your imported reports.
 
 * Permission
 * User Defined function
