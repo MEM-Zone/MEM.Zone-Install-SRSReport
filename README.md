@@ -83,7 +83,7 @@ Get-Help .\Install-SRSReport.ps1
 
 ## Preview
 
-[![](https://s3.ioan.in/Screen-Shot-2020-03-16-at-19.38.48/Screen-Shot-2020-03-16-at-19.38.48.png)](http://www.youtube.com/watch?v=viFOTtz3SOU "Install-SRSReport")
+![](https://github.com/SCCM-Zone/Install-SRSReport/blob/master/Install-SRSReport/Preview/Install-SSRSReport.gif)
 
 [release-version-badge]: https://img.shields.io/github/v/release/SCCM-ZONE/Install-SRSReport
 [release-version]: https://github.com/SCCM-Zone/Install-SRSReport/releases
