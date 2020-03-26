@@ -91,7 +91,7 @@ Get-Help .\Install-SRSReport.ps1
 [release-date]: https://github.com/SCCM-Zone/Install-SRSReport/releases
 [issues-badge]: https://img.shields.io/github/issues/SCCM-Zone/Install-SRSReport
 [issues]: https://github.com/SCCM-Zone/Install-SRSReport/issues?q=is%3Aopen+is%3Aissue
-[commits-since-badge]: https://img.shields.io/github/commits-since/SCCM-Zone/Install-SRSReport/1.1.1
+[commits-since-badge]: https://img.shields.io/github/commits-since/SCCM-Zone/Install-SRSReport/1.1.3
 [commits-since]: https://github.com/SCCM-Zone/Install-SRSReport/commits/master
 [discord-badge]: https://img.shields.io/discord/666618982844989460?logo=discord
 [discord]: https://discord.gg/dz2xcDz
