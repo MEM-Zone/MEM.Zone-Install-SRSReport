@@ -23,9 +23,9 @@ Function Get-RINode {
 .LINK
     https://SCCM.Zone/
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-GIT
+    https://SCCM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-ISSUES
+    https://SCCM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY

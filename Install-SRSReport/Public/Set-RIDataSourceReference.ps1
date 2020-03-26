@@ -31,9 +31,9 @@ Function Set-RIDataSourceReference {
 .LINK
     https://SCCM.Zone/
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-GIT
+    https://SCCM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-ISSUES
+    https://SCCM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -98,6 +98,8 @@ Function Set-RIDataSourceReference {
                 ForEach ($RSDataSource in $RSDataSources) {
                     #  Set variables
                     [string]$RsDataSourcePath = $($RSDataSource.Path)
+                    #  Show progress
+                    Show-Progress -Status "Getting Report Server DataSource [$RsDataSourcePath] --> [$($RSDataSource.Name)]" -Loop
                     #  Get DataSource info
                     Write-Verbose -Message 'Getting datasource info...'
                     If ($FilterConnection) {
@@ -122,8 +124,12 @@ Function Set-RIDataSourceReference {
                 [string[]]$ReportPaths = Get-RsFolderContent -ReportServerUri $ReportServerUri -Path $ReportFolder | Where-Object -Property 'TypeName' -eq 'Report' | Select-Object -ExpandProperty 'Path'
                 If ($($ReportPaths.Count) -eq 0) { Throw "No reports found at this path [$ReportFolder]!" }
                 Write-Verbose -Message "Processing [#$($ReportPaths.Count)] reports..."
+
+                ## Set report DataSources
                 ForEach ($ReportPath in $ReportPaths) {
                     ForEach ($DataSource in $DataSourcesInfo) {
+                        #  Show progress
+                        Show-Progress -Status "Setting Report [$ReportPath] DataSource --> [$($RSDataSource.Name)]" -Loop
                         #  Set variables
                         [string]$DataSourcePath = $($DataSource.Path)
                         #  Set DataSource

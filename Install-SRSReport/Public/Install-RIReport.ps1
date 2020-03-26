@@ -35,9 +35,9 @@ Function Install-RIReport {
 .LINK
     https://SCCM.Zone/
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-GIT
+    https://SCCM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-ISSUES
+    https://SCCM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -74,10 +74,11 @@ Function Install-RIReport {
             [bool]$IsContainer = Test-Path $Path -PathType 'Container' -ErrorAction 'SilentlyContinue'
 
             ## Get report file paths
-            [string[]]$ReportFilePaths = Get-ChildItem -Path $Path -Recurse | Select-Object -ExpandProperty 'FullName' -ErrorAction 'Stop'
+            [string[]]$ReportFilePaths = Get-ChildItem -Path $Path -Recurse -Filter '*.rdl' | Select-Object -ExpandProperty 'FullName' -ErrorAction 'Stop'
 
             ## Set report value
             If ($SetReportNodeValue) {
+                #  Process reports
                 ForEach ($FilePath in $ReportFilePaths) {
                     [hashtable]$NodeParams = @{
                         Path      = $FilePath
@@ -85,7 +86,9 @@ Function Install-RIReport {
                         NodeValue = $($SetReportNodeValue.NodeValue)
                         NsPrefix  = $($SetReportNodeValue.NsPrefix)
                     }
-
+                    #  Show progress
+                    Show-Progress -Status "Seting Report [$FilePath] Node [$($SetReportNodeValue.NodeName)] Value --> [$($SetReportNodeValue.NodeValue)]" -Loop
+                    #  Set node value
                     [string]$NewNodeValue = Set-RINodeValue @NodeParams | Out-String
                     Write-Debug -Message $NewNodeValue
                 }
@@ -99,11 +102,11 @@ Function Install-RIReport {
             }
 
             ## Upload report file(s)
-            If ($IsContainer) {
-                Write-RsFolderContent -ReportServerUri $ReportServerUri -Path $Path -Destination $ReportFolder -Overwrite:$OverWrite
-            }
-            Else {
-                Write-RsCatalogItem -ReportServerUri $ReportServerUri -Path $Path -Destination $ReportFolder -Overwrite:$OverWrite
+            ForEach ($FilePath in $ReportFilePaths) {
+                #  Show progress
+                Show-Progress -Status "Uploading Report [$FilePath] --> [$ReportFolder]" -Loop
+                # Upload report
+                Write-RsCatalogItem -ReportServerUri $ReportServerUri -Path $FilePath -Destination $ReportFolder -Overwrite:$OverWrite
             }
 
             ## Save result

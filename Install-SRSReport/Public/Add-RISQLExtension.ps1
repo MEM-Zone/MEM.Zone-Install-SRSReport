@@ -41,9 +41,9 @@ Function Add-RISQLExtension {
 .LINK
     https://SCCM.Zone/
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-GIT
+    https://SCCM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-ISSUES
+    https://SCCM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -51,9 +51,9 @@ Function Add-RISQLExtension {
 #>
     [CmdletBinding(DefaultParameterSetName='FunctionsAndPermissions')]
     Param (
-        [Parameter(Mandatory=$false,ParameterSetName='FunctionsAndPermissions',HelpMessage='SQL extension file or folder on disk',Position=0)]
-        [Parameter(Mandatory=$false,ParameterSetName='Functions',HelpMessage='SQL extension file or folder on disk',Position=0)]
-        [Parameter(Mandatory=$false,ParameterSetName='Permissions',HelpMessage='SQL extension file or folder on disk',Position=0)]
+        [Parameter(Mandatory=$true,ParameterSetName='FunctionsAndPermissions',HelpMessage='SQL extension file or folder on disk',Position=0)]
+        [Parameter(Mandatory=$true,ParameterSetName='Functions',HelpMessage='SQL extension file or folder on disk',Position=0)]
+        [Parameter(Mandatory=$true,ParameterSetName='Permissions',HelpMessage='SQL extension file or folder on disk',Position=0)]
         [ValidateNotNullorEmpty()]
         [Alias('FolderPath','FilePath','ItemPath')]
         [string]$Path,
@@ -63,33 +63,33 @@ Function Add-RISQLExtension {
         [ValidateNotNullorEmpty()]
         [Alias('Server')]
         [string]$ServerInstance,
-        [Parameter(Mandatory=$true,ParameterSetName='FunctionAndPermissions',HelpMessage='Database name',Position=2)]
+        [Parameter(Mandatory=$true,ParameterSetName='FunctionsAndPermissions',HelpMessage='Database name',Position=2)]
         [Parameter(Mandatory=$true,ParameterSetName='Functions',HelpMessage='Database name',Position=2)]
         [Parameter(Mandatory=$true,ParameterSetName='Permissions',HelpMessage='Database name',Position=2)]
         [ValidateNotNullorEmpty()]
         [Alias('Dbs')]
         [string]$Database,
-        [Parameter(Mandatory=$false,ParameterSetName='FunctionAndPermissions',Position=5)]
-        [Parameter(Mandatory=$false,ParameterSetName='Functions',Position=5)]
-        [Parameter(Mandatory=$false,ParameterSetName='Permissions',Position=5)]
+        [Parameter(Mandatory=$false,ParameterSetName='FunctionsAndPermissions',Position=3)]
+        [Parameter(Mandatory=$false,ParameterSetName='Functions',Position=3)]
+        [Parameter(Mandatory=$false,ParameterSetName='Permissions',Position=3)]
         [ValidateNotNullorEmpty()]
         [Alias('Tmo')]
         [int]$ConnectionTimeout = 0,
-        [Parameter(Mandatory=$false,ParameterSetName='FunctionAndPermissions',Position=6)]
-        [Parameter(Mandatory=$false,ParameterSetName='Functions',Position=6)]
-        [Parameter(Mandatory=$false,ParameterSetName='Permissions',Position=6)]
+        [Parameter(Mandatory=$false,ParameterSetName='FunctionsAndPermissions',Position=4)]
+        [Parameter(Mandatory=$false,ParameterSetName='Functions',Position=4)]
+        [Parameter(Mandatory=$false,ParameterSetName='Permissions',Position=4)]
         [Alias('SQLAuth')]
         [switch]$UseSQLAuthentication,
-        [Parameter(Mandatory=$false,ParameterSetName='FunctionAndPermissions',Position=7)]
-        [Parameter(Mandatory=$false,ParameterSetName='Functions',Position=7)]
+        [Parameter(Mandatory=$false,ParameterSetName='FunctionsAndPermissions',Position=5)]
+        [Parameter(Mandatory=$false,ParameterSetName='Functions',Position=5)]
         [ValidateNotNullorEmpty()]
         [Alias('Force')]
         [switch]$Overwrite,
-        [Parameter(Mandatory=$false,ParameterSetName='Functions',Position=8)]
+        [Parameter(Mandatory=$false,ParameterSetName='Functions',Position=6)]
         [ValidateNotNullorEmpty()]
         [Alias('Fun')]
         [switch]$FunctionsOnly,
-        [Parameter(Mandatory=$false,ParameterSetName='Permissions',Position=7)]
+        [Parameter(Mandatory=$false,ParameterSetName='Permissions',Position=5)]
         [ValidateNotNullorEmpty()]
         [Alias('Perm')]
         [switch]$PermissionsOnly
@@ -103,8 +103,7 @@ Function Add-RISQLExtension {
 
             ## Process functions
             ForEach ($Function in $Functions) {
-
-                ## Set variables
+                #  Set variables
                 [string]$FunctionName = $($Function.BaseName)
                 [string]$FunctionPath = $($Function.FullName)
                 [string]$InstallFunction = Get-Content -Path $FunctionPath | Out-String
@@ -116,28 +115,36 @@ Function Add-RISQLExtension {
                         DROP FUNCTION [dbo].[$FunctionName]
                     END
 "@
-                If (($($PSCmdlet.ParameterSetName) -eq 'Functions') -or ($($PSCmdlet.ParameterSetName) -eq 'FunctionAndPermissions')) {
-                    ## Perform function cleanup
+
+                ## Install functions
+                If (($($PSCmdlet.ParameterSetName) -eq 'Functions') -or ($($PSCmdlet.ParameterSetName) -eq 'FunctionsAndPermissions')) {
+                    #  Perform function cleanup
                     If ($Overwrite) {
-                        Write-Verbose -Message "Performing [$FunctionName] function cleanup..."
+                        #  Show progress
+                        Show-Progress -Status "Cleaning up function --> [$FunctionName]" -Loop
+                        #  Cleanup function
                         Invoke-SQLCommand -ServerInstance $ServerInstance -Database $Database -Query $CleanupFunction -UseSQLAuthentication:$UseSQLAuthentication
                     }
-
-                    ## Install function
-                    Write-Verbose -Message "Installing [$FunctionName] function..."
+                    #  Show progress
+                    Show-Progress -Status "Installing function --> [$FunctionName]" -Loop
+                    #  Install function
                     Invoke-SQLCommand -ServerInstance $ServerInstance -Database $Database -Query $InstallFunction -UseSQLAuthentication:$UseSQLAuthentication
                 }
-                If (($($PSCmdlet.ParameterSetName) -eq 'Permissions') -or ($($PSCmdlet.ParameterSetName) -eq 'FunctionAndPermissions')) {
+
+                ## Grant permissions
+                If (($($PSCmdlet.ParameterSetName) -eq 'Permissions') -or ($($PSCmdlet.ParameterSetName) -eq 'FunctionsAndPermissions')) {
+                    ## Correct Progress
+                    $Script:Steps = $Script:Steps + $($Permissions.Count) - 1
+
                     ## Process permissions
                     ForEach ($Permission in $Permissions) {
-
-                        ## Set variables
+                        #  Set variables
                         [string]$PermissionName = $($Permission.BaseName)
                         [string]$PermissionPath = $($Permission.FullName)
                         [string]$GrantPermission = Get-Content -Path $PermissionPath | Out-String
-
-                        ## Grant permissions
-                        Write-Verbose -Message "Granting permissions from [$PermissionName]..."
+                        #  Show progress
+                        Show-Progress -Status "Granting permission --> [$PermissionName]" -Loop
+                        #  Grant permissions
                         Invoke-SQLCommand -ServerInstance $ServerInstance -Database $Database -Query $GrantPermission -UseSQLAuthentication:$UseSQLAuthentication
                     }
                 }
