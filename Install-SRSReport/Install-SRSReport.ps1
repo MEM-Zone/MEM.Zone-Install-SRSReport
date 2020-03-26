@@ -187,7 +187,7 @@ Function Show-Progress {
 .DESCRIPTION
     Displays progress info and maximizes code reuse.
 .PARAMETER Actity
-    Specifies the progress activity. Default: 'Running Install Please Wait'.
+    Specifies the progress activity. Default: 'Running Install Please Wait...'.
 .PARAMETER Status
     Specifies the progress status.
 .PARAMETER CurrentOperation
@@ -227,7 +227,7 @@ Function Show-Progress {
         [Parameter(Mandatory=$false,Position=0)]
         [ValidateNotNullorEmpty()]
         [Alias('act')]
-        [string]$Activity = 'Running Install Please Wait',
+        [string]$Activity = 'Running Install Please Wait...',
         [Parameter(Mandatory=$true,Position=1)]
         [ValidateNotNullorEmpty()]
         [Alias('sta')]
@@ -743,7 +743,7 @@ Function Install-RIReport {
                 #  Show progress
                 Show-Progress -Status "Uploading Report [$FilePath] --> [$ReportFolder]" -Loop
                 # Upload report
-                Write-RsCatalogItem -ReportServerUri $ReportServerUri -Path $FilePath -Destination $ReportFolder -Overwrite:$OverWrite
+                Write-RsCatalogItem -ReportServerUri $ReportServerUri -Path $FilePath -Destination $ReportFolder -Overwrite:$OverWrite -WarningAction 'SilentlyContinue'
             }
 
             ## Save result
@@ -1085,6 +1085,10 @@ Function Add-RISQLExtension {
 #region ScriptBody
 
 Try {
+
+    ## Clear screen
+    [System.Console]::Clear()
+
     ## Show installation start
     Write-Verbose -Message 'Installation has started!'
 
@@ -1127,7 +1131,7 @@ Try {
         #  Show progress
         Show-Progress -Status "Installing with SQL Extensions -->"
         #  Installing reports
-        Install-RIReport -Path $Path -ReportServerUri $ReportServerUri -ReportFolder $ReportFolder -Overwrite:$OverWrite -WarningAction 'SilentlyContinue' | Out-Null
+        Install-RIReport -Path $Path -ReportServerUri $ReportServerUri -ReportFolder $ReportFolder -Overwrite:$OverWrite | Out-Null
         #  Set shared DataSources
         Set-RIDataSourceReference -Path $Path -ReportServerUri $ReportServerUri -DataSourceRoot $DataSourceRoot -DataSourceName $DataSourceName -FilterConnection $FilterConnection
         #  Installing helper function and granting CMDB required permissions

@@ -6,7 +6,7 @@ Function Show-Progress {
 .DESCRIPTION
     Displays progress info and maximizes code reuse.
 .PARAMETER Actity
-    Specifies the progress activity. Default: 'Running Install Please Wait'.
+    Specifies the progress activity. Default: 'Running Install Please Wait...'.
 .PARAMETER Status
     Specifies the progress status.
 .PARAMETER CurrentOperation
@@ -46,7 +46,7 @@ Function Show-Progress {
         [Parameter(Mandatory=$false,Position=0)]
         [ValidateNotNullorEmpty()]
         [Alias('act')]
-        [string]$Activity = 'Running Install Please Wait',
+        [string]$Activity = 'Running Install Please Wait...',
         [Parameter(Mandatory=$true,Position=1)]
         [ValidateNotNullorEmpty()]
         [Alias('sta')]
