@@ -1,5 +1,9 @@
 # Changelog for Install-SRSReport
 
+## 1.1.4 - 2020-06-11
+
+* Fixed overwrite parameter not overwriting reports #1
+
 ## 1.1.3 - 2020-03-26
 
 * Fixed default parameters, all required parameters will be requested if running the script without parameters

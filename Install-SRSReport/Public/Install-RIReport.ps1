@@ -66,12 +66,18 @@ Function Install-RIReport {
         [switch]$Overwrite
     )
     Begin {
+        [bool]$RSFolderExists = $false
         Write-Debug -Message "Path [$Path], ReportServerUri [$ReportServerUri], ReportFolder [$ReportFolder], Overwrite [$Overwrite]"
     }
     Process {
         Try {
             ## Check if path is a folder
-            [bool]$IsContainer = Test-Path $Path -PathType 'Container' -ErrorAction 'SilentlyContinue'
+            If ($ReportFolder -ne '/') {
+                [string]$RsFolderParent = (Split-Path -Path $ReportFolder -Parent).Replace('\', '/')
+                [string]$RsFolderLeaf = (Split-Path -Path $ReportFolder -Leaf).Replace('\', '/')
+                [string]$GetRSFolder = Get-RsFolderContent -ReportServerUri $ReportServerUri -RsFolder $RsFolderParent | Where-Object -Property 'Name' -eq $RsFolderLeaf -ErrorAction 'SilentlyContinue'
+                $RsFolderExists = -not [string]::IsNullOrEmpty($GetRSFolder)
+            }
 
             ## Get report file paths
             [string[]]$ReportFilePaths = Get-ChildItem -Path $Path -Recurse -Filter '*.rdl' | Select-Object -ExpandProperty 'FullName' -ErrorAction 'Stop'
@@ -95,9 +101,7 @@ Function Install-RIReport {
             }
 
             ## If destination does not exists, create it.
-            If ($ReportFolder -ne '/') {
-                [string]$RsFolderParent = (Split-Path -Path $ReportFolder -Parent).Replace('\', '/')
-                [string]$RsFolderLeaf = (Split-Path -Path $ReportFolder -Leaf).Replace('\', '/')
+            If (-not $RsFolderExists) {
                 New-RsFolder -ReportServerUri $ReportServerUri -Path $RsFolderParent -Name $RsFolderLeaf
             }
 
@@ -106,7 +110,7 @@ Function Install-RIReport {
                 #  Show progress
                 Show-Progress -Status "Uploading Report [$FilePath] --> [$ReportFolder]" -Loop
                 # Upload report
-                Write-RsCatalogItem -ReportServerUri $ReportServerUri -Path $FilePath -Destination $ReportFolder -Overwrite:$OverWrite
+                Write-RsCatalogItem -ReportServerUri $ReportServerUri -Path $FilePath -Destination $ReportFolder -Overwrite:$OverWrite #-WarningAction 'SilentlyContinue'
             }
 
             ## Save result
