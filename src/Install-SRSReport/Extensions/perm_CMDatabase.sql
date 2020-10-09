@@ -9,11 +9,11 @@
     Created by Ioan Popovici
     Replace the <SITE_CODE> with your CM Site Code and uncomment SSMS region if running directly from SSMS.
 .LINK
-    https://MEM.Zone/
+    https://SCCM.Zone/
 .LINK
-    https://MEM.Zone/CM-SRS-Dashboards-GIT
+    https://SCCM.Zone/CM-SRS-Dashboards-GIT
 .LINK
-    https://MEM.Zone/CM-SRS-Dashboards-ISSUES
+    https://SCCM.Zone/CM-SRS-Dashboards-ISSUES
 */
 
 /*##=============================================*/

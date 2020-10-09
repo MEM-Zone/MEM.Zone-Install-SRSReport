@@ -17,11 +17,11 @@ Function New-NamespaceManager {
 .NOTES
     This is an private function should tipically not be called directly.
 .LINK
-    https://MEM.Zone/
+    https://SCCM.Zone/
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://SCCM.Zone/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://SCCM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY

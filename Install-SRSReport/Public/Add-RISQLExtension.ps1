@@ -39,11 +39,11 @@ Function Add-RISQLExtension {
 .NOTES
     This is an public function and can be called directly.
 .LINK
-    https://MEM.Zone/
+    https://SCCM.Zone/
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://SCCM.Zone/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://SCCM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
