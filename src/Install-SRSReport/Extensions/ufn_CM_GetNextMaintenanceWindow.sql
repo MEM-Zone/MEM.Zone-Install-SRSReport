@@ -18,11 +18,11 @@
 .LINK
     https://social.technet.microsoft.com/wiki/contents/articles/7870.sccm-2007-create-report-of-upcoming-maintenance-windows-by-client.aspx (Adam Weigert)
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-GIT
+    https://MEM.Zone/CM-SRS-Dashboards-GIT
 .LINK
-    https://SCCM.Zone/CM-SRS-Dashboards-ISSUES
+    https://MEM.Zone/CM-SRS-Dashboards-ISSUES
 */
 
 /*##=============================================*/

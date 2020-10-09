@@ -37,11 +37,11 @@ Function Invoke-SQLCommand {
 .LINK
     https://stackoverflow.com/questions/8423541/how-do-you-run-a-sql-server-query-from-powershell
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY

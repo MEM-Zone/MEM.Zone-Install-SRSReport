@@ -31,11 +31,11 @@ Function Show-Progress {
 .LINK
     https://adamtheautomator.com/building-progress-bar-powershell-scripts/
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY

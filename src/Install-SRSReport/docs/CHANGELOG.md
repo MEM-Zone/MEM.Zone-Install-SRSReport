@@ -3,6 +3,7 @@
 ## 1.1.4 - 2020-06-11
 
 * Fixed overwrite parameter not overwriting reports #1
+* Changed links to branded domain
 
 ## 1.1.3 - 2020-03-26
 

@@ -55,13 +55,13 @@
 .LINK
     https://github.com/microsoft/ReportingServicesTools
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-RELEASES
+    https://MEM.Zone/Install-SRSReport-RELEASES
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -212,11 +212,11 @@ Function Show-Progress {
 .LINK
     https://adamtheautomator.com/building-progress-bar-powershell-scripts/
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -309,11 +309,11 @@ Function Invoke-SQLCommand {
 .LINK
     https://stackoverflow.com/questions/8423541/how-do-you-run-a-sql-server-query-from-powershell
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -412,11 +412,11 @@ Function New-NamespaceManager {
 .NOTES
     This is an private function should tipically not be called directly.
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -486,11 +486,11 @@ Function Get-RINode {
 .NOTES
     This is an public function and can be called directly.
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -559,11 +559,11 @@ Function Set-RINodeValue {
 .NOTES
     This is an public function and can be called directly.
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -670,11 +670,11 @@ Function Install-RIReport {
 .NOTES
     This is an public function and can be called directly.
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -796,11 +796,11 @@ Function Set-RIDataSourceReference {
 .NOTES
     This is an public function and can be called directly.
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -956,11 +956,11 @@ Function Add-RISQLExtension {
 .NOTES
     This is an public function and can be called directly.
 .LINK
-    https://SCCM.Zone/
+    https://MEM.Zone/
 .LINK
-    https://SCCM.Zone/Install-SRSReport-GIT
+    https://MEM.Zone/Install-SRSReport-GIT
 .LINK
-    https://SCCM.Zone/Install-SRSReport-ISSUES
+    https://MEM.Zone/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
