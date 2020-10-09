@@ -7,17 +7,15 @@
 
 # Install-SRSReport
 
-## Welcome to our awesome SRS Report Installer :)
-
-This repository is a solution installing SRS Reports using PowerShell.
+This is a solution installing SRS Reports using PowerShell.
 
 ## Latest release
 
-See [releases](https://SCCM.Zone/Install-SRSReport-RELEASES).
+See [releases](https://MEM.Zone/Install-SRSReport-RELEASES).
 
 ## Changelog
 
-See [changelog](https://SCCM.Zone/Install-SRSReport-CHANGELOG).
+See [changelog](https://MEM.Zone/Install-SRSReport-CHANGELOG).
 
 ## Prerequisites
 
@@ -83,16 +81,16 @@ Get-Help .\Install-SRSReport.ps1
 
 ## Preview
 
-![](https://github.com/SCCM-Zone/Install-SRSReport/blob/master/Install-SRSReport/Preview/Install-SSRSReport.gif)
+![](https://github.com/MEM.Zone/Install-SRSReport/blob/master/Install-SRSReport/Preview/Install-SSRSReport.gif)
 
-[release-version-badge]: https://img.shields.io/github/v/release/SCCM-ZONE/Install-SRSReport
-[release-version]: https://github.com/SCCM-Zone/Install-SRSReport/releases
-[release-date-badge]: https://img.shields.io/github/release-date-pre/SCCM-ZONE/Install-SRSReport
-[release-date]: https://github.com/SCCM-Zone/Install-SRSReport/releases
-[issues-badge]: https://img.shields.io/github/issues/SCCM-Zone/Install-SRSReport
-[issues]: https://github.com/SCCM-Zone/Install-SRSReport/issues?q=is%3Aopen+is%3Aissue
-[commits-since-badge]: https://img.shields.io/github/commits-since/SCCM-Zone/Install-SRSReport/v1.1.4
-[commits-since]: https://github.com/SCCM-Zone/Install-SRSReport/commits/master
+[release-version-badge]: https://img.shields.io/github/v/release/MEM.Zone/Install-SRSReport
+[release-version]: https://github.com/MEM.Zone/Install-SRSReport/releases
+[release-date-badge]: https://img.shields.io/github/release-date-pre/MEM.Zone/Install-SRSReport
+[release-date]: https://github.com/MEM.Zone/Install-SRSReport/releases
+[issues-badge]: https://img.shields.io/github/issues/MEM.Zone/Install-SRSReport
+[issues]: https://github.com/MEM.Zone/Install-SRSReport/issues?q=is%3Aopen+is%3Aissue
+[commits-since-badge]: https://img.shields.io/github/commits-since/MEM.Zone/Install-SRSReport/v1.1.5
+[commits-since]: https://github.com/MEM.Zone/Install-SRSReport/commits/master
 [discord-badge]: https://img.shields.io/discord/666618982844989460?logo=discord
 [discord]: https://discord.gg/dz2xcDz
 [twitter-badge]: https://img.shields.io/twitter/follow/ioanpopovici?style=social&logo=twitter

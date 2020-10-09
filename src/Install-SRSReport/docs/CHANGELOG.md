@@ -1,5 +1,9 @@
 # Changelog for Install-SRSReport
 
+## 1.1.5 - 2020-10-09
+
+* Changed links to branded domain
+
 ## 1.1.4 - 2020-06-11
 
 * Fixed overwrite parameter not overwriting reports #1
