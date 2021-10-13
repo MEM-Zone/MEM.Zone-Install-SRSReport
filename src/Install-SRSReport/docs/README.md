@@ -89,7 +89,7 @@ Get-Help .\Install-SRSReport.ps1
 [release-date]: https://github.com/MEM-Zone/Install-SRSReport/releases
 [issues-badge]: https://img.shields.io/github/issues/MEM-Zone/Install-SRSReport
 [issues]: https://github.com/MEM-Zone/Install-SRSReport/issues?q=is%3Aopen+is%3Aissue
-[commits-since-badge]: https://img.shields.io/github/commits-since/MEM-Zone/Install-SRSReport/v1.1.5
+[commits-since-badge]: https://img.shields.io/github/commits-since/MEM-Zone/Install-SRSReport/v1.1.6
 [commits-since]: https://github.com/MEM-Zone/Install-SRSReport/commits/master
 [discord-badge]: https://img.shields.io/discord/666618982844989460?logo=disco
 [discord]: https://discord.gg/dz2xcDz
