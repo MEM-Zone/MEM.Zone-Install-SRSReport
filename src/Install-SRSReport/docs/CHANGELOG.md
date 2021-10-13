@@ -1,5 +1,9 @@
 # Changelog for Install-SRSReport
 
+## 1.1.6 - 2020-10-14
+
+* Included `ReportingServicesTools` dependency in the package.
+
 ## 1.1.5 - 2020-10-09
 
 * Changed links to branded domain
