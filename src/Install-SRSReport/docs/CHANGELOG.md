@@ -1,5 +1,9 @@
 # Changelog for Install-SRSReport
 
+## 1.1.7 - 2022-05-05
+
+* Fix SQL connection not working remotely.
+
 ## 1.1.6 - 2020-10-14
 
 * Included `ReportingServicesTools` dependency in the package.
