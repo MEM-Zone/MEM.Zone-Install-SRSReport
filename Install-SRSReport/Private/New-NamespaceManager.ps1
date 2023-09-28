@@ -17,7 +17,7 @@ Function New-NamespaceManager {
 .NOTES
     This is an private function should tipically not be called directly.
 .LINK
-    https://MEM.Zone/
+    https://MEM.Zone
 .LINK
     https://MEM.Zone/Install-SRSReport-GIT
 .LINK

@@ -39,7 +39,7 @@ Function Add-RISQLExtension {
 .NOTES
     This is an public function and can be called directly.
 .LINK
-    https://MEM.Zone/
+    https://MEM.Zone
 .LINK
     https://MEM.Zone/Install-SRSReport-GIT
 .LINK
