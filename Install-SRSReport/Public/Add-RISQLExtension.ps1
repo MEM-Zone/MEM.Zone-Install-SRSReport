@@ -41,9 +41,9 @@ Function Add-RISQLExtension {
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY

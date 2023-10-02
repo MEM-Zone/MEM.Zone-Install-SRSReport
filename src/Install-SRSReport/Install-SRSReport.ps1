@@ -57,11 +57,11 @@
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-RELEASES
+    https://MEMZ.one/Install-SRSReport-RELEASES
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -214,9 +214,9 @@ Function Show-Progress {
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -311,9 +311,9 @@ Function Invoke-SQLCommand {
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -414,9 +414,9 @@ Function New-NamespaceManager {
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -488,9 +488,9 @@ Function Get-RINode {
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -561,9 +561,9 @@ Function Set-RINodeValue {
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -672,9 +672,9 @@ Function Install-RIReport {
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -798,9 +798,9 @@ Function Set-RIDataSourceReference {
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY
@@ -958,9 +958,9 @@ Function Add-RISQLExtension {
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/Install-SRSReport-GIT
+    https://MEMZ.one/Install-SRSReport-GIT
 .LINK
-    https://MEM.Zone/Install-SRSReport-ISSUES
+    https://MEMZ.one/Install-SRSReport-ISSUES
 .COMPONENT
     RS
 .FUNCTIONALITY

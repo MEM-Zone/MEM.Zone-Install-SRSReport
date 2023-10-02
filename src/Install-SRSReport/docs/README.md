@@ -11,11 +11,11 @@ This is a solution installing SRS Reports using PowerShell.
 
 ## Latest release
 
-See [releases](https://MEM.Zone/Install-SRSReport-RELEASES).
+See [releases](https://MEMZ.one/Install-SRSReport-RELEASES).
 
 ## Changelog
 
-See [changelog](https://MEM.Zone/Install-SRSReport-CHANGELOG).
+See [changelog](https://MEMZ.one/Install-SRSReport-CHANGELOG).
 
 ## Prerequisites
 

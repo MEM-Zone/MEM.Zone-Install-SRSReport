@@ -11,9 +11,9 @@
 .LINK
     https://MEM.Zone
 .LINK
-    https://MEM.Zone/CM-SRS-Dashboards-GIT
+    https://MEMZ.one/CM-SRS-Dashboards-GIT
 .LINK
-    https://MEM.Zone/CM-SRS-Dashboards-ISSUES
+    https://MEMZ.one/CM-SRS-Dashboards-ISSUES
 */
 
 /*##=============================================*/
