@@ -1,5 +1,11 @@
 # Changelog for Install-SRSReport
 
+## 1.1.8 - 2023-10-03
+
+* Moved short link domain from `MEM.Zone` to `MEMZ.one`
+* Updated all shortlinks to use `MEMZ.one`
+* Updated repo name and links
+
 ## 1.1.7 - 2022-05-05
 
 * Fix SQL connection not working remotely.
